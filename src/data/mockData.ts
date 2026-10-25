@@ -1,0 +1,120 @@
+import { User, Post, ChatMessage } from '../types';
+
+export const CURRENT_USER: User = {
+  id: 'u_me',
+  username: 'david_dev',
+  fullName: 'David Developer',
+  avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80',
+  bio: '🚀 Mobile Architect | React Native & TypeScript enthusiast | Construyendo aplicaciones escalables',
+  followersCount: 1420,
+  followingCount: 389,
+  postsCount: 42,
+  isFollowing: false,
+};
+
+export const MOCK_USERS: User[] = [
+  {
+    id: 'u_1',
+    username: 'sofia_ux',
+    fullName: 'Sofía Martínez',
+    avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80',
+    bio: 'Product Designer @ TechCorp. Obsesionada con la accesibilidad y el micro-interaccionismo ✨',
+    followersCount: 3890,
+    followingCount: 412,
+    postsCount: 88,
+    isFollowing: true,
+  },
+  {
+    id: 'u_2',
+    username: 'carlos_ai',
+    fullName: 'Carlos Gómez',
+    avatarUrl: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=300&q=80',
+    bio: 'AI Researcher & ML Engineer 🤖 Compartiendo avances y papers semanales.',
+    followersCount: 5200,
+    followingCount: 198,
+    postsCount: 115,
+    isFollowing: false,
+  },
+  {
+    id: 'u_3',
+    username: 'valeria_codes',
+    fullName: 'Valeria Rios',
+    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
+    bio: 'Fullstack Dev ⚡ React Native + Node.js. Amante del café de especialidad ☕',
+    followersCount: 2310,
+    followingCount: 450,
+    postsCount: 64,
+    isFollowing: false,
+  },
+  {
+    id: 'u_4',
+    username: 'marcos_photo',
+    fullName: 'Marcos Herrera',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
+    bio: 'Fotografía urbana y paisajismo 📸 Explorando el mundo lente a lente.',
+    followersCount: 12400,
+    followingCount: 680,
+    postsCount: 310,
+    isFollowing: true,
+  },
+];
+
+export const MOCK_POSTS: Post[] = [
+  {
+    id: 'p_1',
+    author: MOCK_USERS[0],
+    mediaUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+    mediaType: 'image',
+    caption: 'Explorando nuevas estéticas visuales en Glassmorphism y Dark UI. ¿Qué opinan de esta paleta neón?',
+    likesCount: 342,
+    commentsCount: 28,
+    isLiked: false,
+    createdAt: 'Hace 2 horas',
+  },
+  {
+    id: 'p_2',
+    author: MOCK_USERS[1],
+    mediaUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+    mediaType: 'image',
+    caption: 'Nuevo benchmark de modelos de visión en dispositivos edge (móviles). Los resultados de latencia son asombrosos.',
+    likesCount: 890,
+    commentsCount: 65,
+    isLiked: true,
+    createdAt: 'Hace 5 horas',
+  },
+  {
+    id: 'p_3',
+    author: MOCK_USERS[2],
+    mediaUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+    mediaType: 'image',
+    caption: 'Configurando el nuevo stack con TypeScript 5 y React Native New Architecture. ¡El rendimiento en listas es brutal! 🚀',
+    likesCount: 512,
+    commentsCount: 42,
+    isLiked: false,
+    createdAt: 'Hace 1 día',
+  },
+];
+
+export const MOCK_MESSAGES: ChatMessage[] = [
+  {
+    id: 'm_1',
+    senderId: 'u_1',
+    text: '¡Hola David! ¿Cómo va el desarrollo de los nuevos componentes en React Native?',
+    timestamp: '10:30 AM',
+    isMine: false,
+  },
+  {
+    id: 'm_2',
+    senderId: 'u_me',
+    text: '¡Hola Sofía! Todo excelente, acabo de terminar la virtualización del Feed y la validación de archivos.',
+    timestamp: '10:32 AM',
+    isMine: true,
+  },
+  {
+    id: 'm_3',
+    senderId: 'u_1',
+    text: 'Genial, recuerda mantener el bundle optimizado y el feedback visual reactivo.',
+    timestamp: '10:33 AM',
+    isMine: false,
+  },
+];
