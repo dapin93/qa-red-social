@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { UploadFile } from '../types';
 import { Colors } from '../theme/colors';
+import { AWS_ACCESS_KEY, dbPassword } from '../config/awsConfig';
 
 const MAX_FILE_SIZE_MB = 50;
 const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
